@@ -25,7 +25,7 @@
 // parameters and returns the sum of those 2 numbers.
 var sum = function(x,y){
   return  x + y;
-}
+};
 
 
 
@@ -34,16 +34,20 @@ var sum = function(x,y){
 // and returns the average of those 3 numbers.
 var avg = function(x,y,z){
   return (x + y + z) / 3;
-}
+};
 
 
 
 // Q3
 // Write a function called `getLength` that takes one
 // parameter (a string) and returns the length
-var getLength = function("pineapples"){
-  
-}
+var getLength = function(string) {
+  var count = 0;
+  while (string[count] !== undefined) {
+    count +=1;
+  }
+  return count;
+};
 
 
 
@@ -53,10 +57,10 @@ var getLength = function("pineapples"){
 // parameter is greater than the first. Otherwise
 // the function should return `false`.
 var greaterThan = function (x,y){
-  if (x > y) {
-    return "true";
+  if (y > x) {
+    return true;
   } else {
-    return "false";
+    return false;
   }
 };
 
@@ -66,9 +70,9 @@ var greaterThan = function (x,y){
 // single parameter and returns a string that
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
-var greet = function (Lela) {
-
-}
+var greet = function (name) {
+  return ("Hello" + " " + name + "!")
+};
 
 
 
@@ -83,6 +87,9 @@ var greet = function (Lela) {
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 
+var madlib = function (a,b,c,d) {
+  return ("The " + a + " "+ b + " "+ c + " "+ "over the " + d)
+};
 
 
 
