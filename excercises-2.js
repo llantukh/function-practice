@@ -3,7 +3,7 @@
 // Use the if-then-else construct available in JavaScript.
 // ---------------------
 
-function max(x,y){
+var max = function (x,y){
   if (x > y){
     return x;
   } else {
@@ -25,11 +25,11 @@ var maxOfThree = function (x, y, z){
   }
 };
 // or like this:
-var maxOfThree = function (x, y, z){
-  if (x >= y && x >= z) {return x; }
-  if (y >= x && y >=z)  {return y; }
-  return z
-};
+// var maxOfThree = function (x, y, z){
+//   if (x >= y && x >= z) {return x; }
+//   if (y >= x && y >=z)  {return y; }
+//   return z
+// };
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1)
@@ -90,4 +90,4 @@ var reverseAlt = function (string) {
   return newString;
 };
 
-// I DO NOT UNDERSTAND THIS PROBLEM 
+// I DO NOT UNDERSTAND THIS PROBLEM

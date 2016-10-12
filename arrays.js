@@ -38,8 +38,8 @@ var instructors = [
 
 function findMax (nums) {
   var biggest = 0;
-  for (var index = 0; index < nums.length; index++) {
-    var currentNum = nums[index];
+  for (var count = 0; count < nums.length; count++) {
+    var currentNum = nums[count];
     if (currentNum > biggest) {
       biggest = currentNum;
     }
@@ -98,7 +98,7 @@ var findOdds = function (nums){
 // ---------------------------
 // 5. Find words that contain `is`
 // ---------------------------
-
+"cookies".includes("cook")     will return true
 
 
 // ---------------------------
