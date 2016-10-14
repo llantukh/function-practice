@@ -57,8 +57,7 @@ var strings = ['this','is','a','collection','of','words'];
 var count = 0;
 while (strings[count] !== undefined) {
   count +=1;
-}; //this counts how many words there are, not how many characters are in each word
-
+};
 // ---------------------------
 // 3. Find even numbers
 // ---------------------------
@@ -98,7 +97,19 @@ var findOdds = function (nums){
 // ---------------------------
 // 5. Find words that contain `is`
 // ---------------------------
-"cookies".includes("cook")     will return true
+var isIt = function (strings) {
+  var result = [];
+  for (var i = 0; i < strings.length; i++) {
+    var containsIs = strings[i];
+    if (strings.includes("is")) {
+      result.push(containsIs);
+    }
+  }
+
+  return result;
+};
+
+// "cookies".includes("cook")     will return true
 
 
 // ---------------------------
@@ -110,6 +121,7 @@ var concat = function (items1, items2) {
 
   for (var index = 0; index < items1.length; index++) {
     result.push(items1[index]);
+  }
 
     for (var index = 0; index < items2.length; index++) {
       result.push(items2[index]);
