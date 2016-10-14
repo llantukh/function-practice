@@ -28,7 +28,8 @@ var instructors = [
     { firstname : 'Will', teaches : 'JavaScript'},
     { firstname : 'Calvin', teaches : 'JavaScript'},
     { firstname : 'James', teaches : 'Ruby'}
-]; //this is an array of objects and each object has two properties
+];
+//this is an array of objects and each object has two properties
 
 
 
@@ -65,8 +66,8 @@ while (strings[count] !== undefined) {
 var findEvens = function (nums){
   var result = [];
 
-  for (var i = 0; i < nums.length; i++) {
-    var currentNum = nums[i];
+  for (var count = 0; count < nums.length; count++) {
+    var currentNum = nums[count];
     if (currentNum % 2 === 0) {
       result.push(currentNum);
     }
@@ -83,8 +84,8 @@ var findEvens = function (nums){
 var findOdds = function (nums){
   var result = [];
 
-  for (var i = 0; i < nums.length; i++) {
-    var currentNum = nums[i];
+  for (var count = 0; count < nums.length; count++) {
+    var currentNum = nums[count];
     if (currentNum % 2 !== 0) {
       result.push(currentNum);
     }
@@ -99,18 +100,15 @@ var findOdds = function (nums){
 // ---------------------------
 var isIt = function (strings) {
   var result = [];
-  for (var i = 0; i < strings.length; i++) {
-    var containsIs = strings[i];
-    if (strings.includes("is")) {
+  for (var count = 0; count < strings.length; count++) {
+    var containsIs = strings[count];
+    if (containsIs.includes("is")) {
       result.push(containsIs);
     }
   }
 
   return result;
 };
-
-// "cookies".includes("cook")     will return true
-
 
 // ---------------------------
 // 6. Join Both Arrays Together [you need two arguments and two loops]
@@ -119,12 +117,12 @@ var isIt = function (strings) {
 var concat = function (items1, items2) {
   var result =[];
 
-  for (var index = 0; index < items1.length; index++) {
-    result.push(items1[index]);
+  for (var count = 0; count < items1.length; count++) {
+    result.push(items1[count]);
   }
 
-    for (var index = 0; index < items2.length; index++) {
-      result.push(items2[index]);
+    for (var count = 0; count < items2.length; count++) {
+      result.push(items2[count]);
   }
   return result;
 };
@@ -135,4 +133,16 @@ var concat = function (items1, items2) {
 // 7. Use the Instructors array and find all that teach JavaScript,
 //    then sort them alphabetically
 // ---------------------------
-currentItem .teaches === javascript
+
+var java = function (instructors) {
+  var result = [];
+
+  for (count = 0; count < instructors.length; count++) {
+    var currentInstructor = instructors[count];
+    if (currentInstructor.teaches === "JavaScript") {
+      result.push(currentInstructor);
+    }
+  }
+  return result;
+};
+// currentItem .teaches === javascript
