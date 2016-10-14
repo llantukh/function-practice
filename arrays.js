@@ -134,9 +134,8 @@ var concat = function (items1, items2) {
 //    then sort them alphabetically
 // ---------------------------
 
-var java = function (instructors) {
+var java = function () {
   var result = [];
-
   for (count = 0; count < instructors.length; count++) {
     var currentInstructor = instructors[count];
     if (currentInstructor.teaches === "JavaScript") {
@@ -145,4 +144,9 @@ var java = function (instructors) {
   }
   return result;
 };
-// currentItem .teaches === javascript
+
+var alphabetically = java().sort(function(a,b){
+  if (a.firstname.toLowerCase() < b.firstname.toLowerCase()) {return -1};
+  if (a.firstname.toLowerCase() > b.firstname.toLowerCase()) {return 1};
+  return 0;
+});
